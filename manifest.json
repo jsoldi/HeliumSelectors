@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Helium Selectors",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"icons": {
 		"16": "/media/icon/16.png",
 		"24": "/media/icon/24.png",
@@ -19,5 +19,8 @@
 	"browser_action": {
 		"default_title": "Helium Selectors",
 		"default_popup": "html/popup.html"
-	}
+	},	
+	"permissions": [
+		"activeTab"
+	]
 }
