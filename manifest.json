@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Helium Selectors",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"icons": {
 		"16": "/media/icon/16.png",
 		"24": "/media/icon/24.png",
@@ -17,10 +17,8 @@
 		"js": ["/js/inject/sets.js", "/js/inject/combinator.js", "/js/inject/gathering.js", "/js/inject/overlay.js", "/js/inject/inject.js"]
 	}],
 	"browser_action": {
-		"default_title": "Selecto",
+		"default_title": "Helium Selectors",
 		"default_popup": "html/popup.html"
 	},	
-	"permissions": [
-    	"<all_urls>"
-	]
+	"permissions": []
 }

@@ -79,10 +79,6 @@ window.addEventListener('load', function(){
 	$('#selecting').addEventListener('checked', updateInject);
 	assignScript('selectSimilar', 'window.actions.selectSimilar()');
 	assignScript('selectInspected', 'window.actions.addElement($0)');
-	// assignScript('selectParent', 'window.actions.selectParent()');
-	// assignScript('selectChild', 'window.actions.selectChild()');
-	// assignScript('selectPrevious', 'window.actions.selectPrevious()');
-	// assignScript('selectNext', 'window.actions.selectNext()');
 	$('#reset').addEventListener('click', () => { kindInfo = null; updateInject(); });
 
 	$('#css').addEventListener('click', function(e) {
