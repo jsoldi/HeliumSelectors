@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Helium Selectors",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"icons": {
 		"16": "/media/icon/16.png",
 		"24": "/media/icon/24.png",
@@ -13,14 +13,14 @@
 	"description": "Generate CSS selectors from sample elements.",
 	"devtools_page": "html/devtools.html",
 	"content_scripts": [{
-		"matches": ["<all_urls>"],
+		"matches": [
+			"http://*/*",
+			"https://*/*"
+		],
 		"js": ["/js/inject/sets.js", "/js/inject/combinator.js", "/js/inject/gathering.js", "/js/inject/overlay.js", "/js/inject/inject.js"]
 	}],
 	"browser_action": {
 		"default_title": "Helium Selectors",
 		"default_popup": "html/popup.html"
-	},	
-	"permissions": [
-		"activeTab"
-	]
+	}
 }
