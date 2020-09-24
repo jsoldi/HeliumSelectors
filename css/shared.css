@@ -1,0 +1,147 @@
+:root {
+  --preview-top: 36px;
+  --footer-height: 22px;
+}		
+html,body { 
+	font: 12px Helvetica, sans-serif;
+	height:100%; 
+	padding: 0;
+	margin: 0;
+}
+body.dark {
+	background-color: #242424;
+	color: #F0F0F0;
+}
+body.light {
+	background-color: #FFFFFF;
+	color: #202020;
+}
+pre {
+    margin: 0;
+    padding: 0;
+}
+pre.css {
+	height: 28px;
+	width: 100%;
+	overflow: hidden;
+	margin-right: 5px;
+}
+code#css {
+	padding: 7px 7px 7px 7px;
+	overflow: hidden;
+	border-radius: 2px;
+}
+pre.preview {
+    position: absolute; 
+    top: var(--preview-top);
+    left: 0px;
+    bottom: 0px; 
+    width: 100%;
+    height: calc(100% - (var(--preview-top) + var(--footer-height)));
+}
+code {
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+code#preview {
+	overflow: auto;
+}
+.toolbox {
+	padding: 4px 0px 4px 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+}
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	outline: inherit;
+	cursor: pointer;
+}
+.dark .button {
+	border-color: #FFFFFF33;
+}
+.light .button {
+	border-color: #00000033;
+}
+.button {
+	box-sizing: border-box;
+	border: 1px solid;
+	color: inherit;
+	padding: 4px;
+	margin-right: 0px;
+}
+.dark .button:hover {
+	background-color: #FFFFFF20;
+}
+.light .button:hover {
+	background-color: #00000020;
+}
+.dark .button:active {
+	background-color: #00000020;
+}
+.light .button:active {
+	background-color: #FFFFFF20;
+}
+.button > .material-icons {
+	font-size: 18px;
+}
+.separator {
+	margin: 0px 6px 0px 4px;
+	width: 0px;
+	height: 36px;
+}
+.dark .checked {
+	border-color: #6666FF;
+	background-color: #FFFFFF05;
+}
+.light .checked {
+	border-color: #3333FF;
+	background-color: #00000005;
+}
+.tooltip {
+	position:relative;
+}
+.dark .tooltip:before {
+	background-color:#191919;
+	color: #f0f0f0;
+}
+.light .tooltip:before {
+	background-color:#E0E0E0;
+	color: #101010;
+}
+.tooltip:before {
+	content: attr(data-text);
+	position:absolute;
+	left:-1px;
+	top:100%;
+	margin-top:8px;
+	padding: 4px 16px 4px 16px;
+	text-align:center;
+	display:none; 
+	z-index: 2222;
+	white-space: nowrap;
+}
+.tooltip:hover:before {
+	display:block;
+}
+.footer {
+	box-sizing: border-box;
+	position: fixed;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	height: var(--footer-height);
+	bottom: 0px;
+	padding: 5px 0px 0px 9px;
+}

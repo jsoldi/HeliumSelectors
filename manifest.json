@@ -1,0 +1,26 @@
+{
+	"manifest_version": 2,
+	"name": "Selecto",
+	"version": "0.1.0",
+	"icons": {
+		"16": "/media/icon/16.png",
+		"24": "/media/icon/24.png",
+		"32": "/media/icon/32.png",
+		"48": "/media/icon/48.png",
+		"64": "/media/icon/64.png",
+		"128": "/media/icon/128.png"
+	},
+	"description": "Generate CSS selectors from sample elements.",
+	"devtools_page": "html/devtools.html",
+	"content_scripts": [{
+		"matches": ["<all_urls>"],
+		"js": ["/js/inject/sets.js", "/js/inject/combinator.js", "/js/inject/gathering.js", "/js/inject/overlay.js", "/js/inject/inject.js"]
+	}],
+	"browser_action": {
+		"default_title": "Selecto",
+		"default_popup": "html/popup.html"
+	},	
+	"permissions": [
+    	"<all_urls>"
+	]
+}
