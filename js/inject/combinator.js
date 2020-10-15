@@ -22,7 +22,7 @@ window.Combinator = (function(){
 
 	var element = (function(){
 		var gatherAttr = function(filter, e) {
-			var entries = Array.from(e.attributes).filter(a => a.name !== 'id').filter(filter).map(a => [a.name, a.value]);
+			var entries = Array.from(e.attributes).filter(a => a.name !== 'id').filter(filter).map(a => [fixIdentifier(a.name), a.value]);
 			return entries.length ? Object.fromEntries(entries) : fail('No attributes');
 		};
 

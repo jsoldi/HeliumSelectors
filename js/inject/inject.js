@@ -12,7 +12,27 @@
 
 	var updateKindInfo = func => chrome.runtime.sendMessage({ name: 'getKindInfo' }, kindInfo => setKindInfo(func(kindInfo)));
 
-    var selectRelative = getRelative => ___selection.selectElements([...new Set(window.___selection.getElements().map(getRelative).filter(r => !!r))]);
+	var getRelatives = function(elements, getRelative) {
+    	var relSet = new Set();
+    	var relList = [];
+
+    	for (var e of elements) {
+    		var rel = getRelative(e);
+
+    		if (rel && !relSet.has(rel)) { // Make sure relatives are 1 to 1 with elements.
+    			relSet.add(rel);
+    			relList.push(rel);
+    		}
+    		else
+    			return elements;
+    	}
+
+    	return relList;
+	};
+
+    var selectRelative = function(getRelative) { 
+    	return ___selection.selectElements(getRelatives(window.___selection.getElements(), getRelative));
+    };
 
     var addElement = element => updateKindInfo(kindInfo => kindInfo ? 
 		Gathering.addToKindInfo(kindInfo, [element]) : 

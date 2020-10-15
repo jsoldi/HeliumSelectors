@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Helium Selectors",
-	"version": "0.1.5",
+	"version": "0.1.6",
 	"icons": {
 		"16": "/media/icon/16.png",
 		"24": "/media/icon/24.png",
